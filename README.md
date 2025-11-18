@@ -38,6 +38,7 @@ DeviceFileEvents
 | order by Timestamp desc
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
 ```
+<img width="2835" height="854" alt="Screenshot 2025-11-18 180510" src="https://github.com/user-attachments/assets/6d545454-f168-4c14-938d-232334b21feb" />
 
 ---
 
@@ -53,6 +54,7 @@ DeviceProcessEvents
 | where DeviceName == "threat-hunt-lab" and ProcessCommandLine contains "tor-browser-windows-x86_64-portable-15.0.1.exe"
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
+<img width="2815" height="683" alt="Screenshot 2025-11-18 180553" src="https://github.com/user-attachments/assets/27c02f21-d2a8-4001-a904-f34dabb97f74" />
 
 ---
 
@@ -69,6 +71,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 | order by Timestamp desc
 ```
+<img width="2835" height="1055" alt="Screenshot 2025-11-18 180633" src="https://github.com/user-attachments/assets/4ba0c6ce-41c7-4fd1-a701-cc26ef6d34dd" />
 
 ---
 
@@ -87,6 +90,7 @@ DeviceNetworkEvents
 | project Timestamp, DeviceName, Account = InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName, InitiatingProcessFolderPath
 | order by Timestamp desc
 ```
+<img width="2836" height="846" alt="Screenshot 2025-11-18 180735" src="https://github.com/user-attachments/assets/9ecceee5-9d76-4819-9fc9-8506fe4bc329" />
 
 ---
 
